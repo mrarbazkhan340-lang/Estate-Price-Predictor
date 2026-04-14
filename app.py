@@ -3,8 +3,7 @@ import pandas as pd
 import joblib
 
 # Load model
-with open("model.pkl", "rb") as f:
-    model = joblib.load("model.pkl")
+model = joblib.load("model.pkl")
     
 # Page config
 st.set_page_config(page_title="Real Estate Predictor", layout="centered")
