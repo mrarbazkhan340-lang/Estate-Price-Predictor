@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 # Load model
 with open("model.pkl", "rb") as f:
-    model = pickle.load(f)
+    model = joblib.load("model.pkl")
+    
 # Page config
 st.set_page_config(page_title="Real Estate Predictor", layout="centered")
 
