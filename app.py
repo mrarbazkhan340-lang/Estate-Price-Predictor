@@ -3,8 +3,8 @@ import pandas as pd
 import pickle
 
 # Load model
-model = pickle.load(open("model.pkl", "rb"))
-
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
 # Page config
 st.set_page_config(page_title="Real Estate Predictor", layout="centered")
 
