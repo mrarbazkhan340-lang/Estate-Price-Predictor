@@ -2,16 +2,17 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-@st.cache_resource
-def load_model():
-    return joblib.load("model.pkl")
-
-model = load_model()
-
 # Page config
 st.set_page_config(page_title="Real Estate Predictor", layout="centered")
 
-# 🔥 Premium UI CSS
+@st.cache_resource
+def load_model():
+    return joblib.load("model.pkl")
+    
+
+model = load_model()
+
+#  Premium UI CSS
 st.markdown("""
 <style>
 
